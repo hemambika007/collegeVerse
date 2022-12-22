@@ -1,0 +1,16 @@
+<% layout('layouts/boilerplate')%>
+    <div class="chat">
+        <section class="chat__section">
+            <div class="brand">
+                <img height="40" src="/wassup.png" alt="">
+                <div><h1>Chat with Trainer</h1></div>
+                <br>
+                
+            </div>
+            <div class="message1 incoming1 m-3"><div >Day- <span class="day"></span></div>Welcome <%= user.username %>!! </div>
+            <div class="message__area"></div>
+            <div class="mx-3">
+                <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+            </div>
+        </section>
+    </div>

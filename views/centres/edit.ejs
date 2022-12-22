@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate') %> 
+<div class="row">
+    <h1 class="text-center">Edit Centre</h1>
+    <div class="col-6 offset-3">
+        <form action="/centres/<%=centre._id%>?_method=PUT" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="centre[title]"
+                    value="<%=centre.title %>" required>
+                    <div class="valid-feedback">
+                        Proceed!
+                    </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="centre[location]"
+                    value="<%=centre.location %>" required>
+                    <div class="valid-feedback">
+                        Proceed!
+                    </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="centre[image]"
+                    value="<%=centre.image %>" required>
+                    <div class="valid-feedback">
+                        Proceed!
+                    </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="contact">Centre Contact</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="contact-label">ph</span>
+                    <input type="text" class="form-control" id="contact" placeholder="0.00" aria-label="contact"
+                        aria-describedby="contact-label" name="centre[contact]" value="<%=centre.contact %>" required>
+                        <div class="valid-feedback">
+                            Proceed!
+                        </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description"
+                    name="centre[description]" required><%= centre.description%></textarea>
+                    <div class="valid-feedback">
+                        Proceed!
+                    </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info">Update Centre</button>
+            </div>
+        </form>
+        <a href="/centres/<%= centre._id%>">Back To Centre</a>
+
+    </div>
+</div>
+

@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %> 
+<div class="row">
+    <h1 class="text-center">Edit Centre</h1>
+    <div class="col-6 offset-3">
+        <form action="/centres/<%=query._id%>?_method=PUT" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="title">Question</label>
+                <input class="form-control" type="text" id="title" name="query[question]"
+                    value="<%=query.question %>" required>
+                    <div class="valid-feedback">
+                        Proceed!
+                    </div>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="centre[image]"
+                    value="<%=centre.image %>" required>
+                    <div class="valid-feedback">
+                        Proceed!
+                    </div>
+            </div>
+            
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description"
+                    name="query[description]" required><%= query.description%></textarea>
+                    <div class="valid-feedback">
+                        Proceed!
+                    </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info">Update Centre</button>
+            </div>
+        </form>
+        <a href="/centres/<%= query._id%>">Back To Centre</a>
+
+    </div>
+</div>
+

@@ -1,0 +1,53 @@
+
+
+<nav class="p-5 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ... shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center ">
+      <span class="text-2xl font-[Poppins] cursor-pointer">
+      
+        <span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ...">
+            
+            COLLEGEVERSE
+          </span>
+      </span>
+      
+      <span class="text-3xl  cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu"  onclick="Menu(this)"></ion-icon>
+      </span>
+    
+    </div>
+
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="/" class="text-xl hover:text-white duration-500">Home</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="/centres" class="text-xl hover:text-cyan-500 duration-500">Post</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="centres/new" class="text-xl hover:text-cyan-500 duration-500">New Post</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="/centres/q" class="text-xl hover:text-cyan-500 duration-500">Queries</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="centres/newq" class="text-xl hover:text-cyan-500 duration-500">New Query</a>
+      </li>
+      <% if(!currentUser) {%> 
+      <li class="mx-4 my-6 md:my-0">
+        <a href="/login" class="text-xl hover:text-cyan-500 duration-500">Login</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="/register" class="text-xl hover:text-cyan-500 duration-500">Register</a>
+      </li>
+      <% } else { %> 
+      <li class="mx-4 my-6 md:my-0">
+        <a href="/logout" class="text-xl hover:text-cyan-500 duration-500">LogOut</a>
+      </li>
+      <% } %> 
+
+      <!-- <button class="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+        Get started
+      </button> -->
+<h2 class=""></h2>
+    </ul>
+  </nav>
